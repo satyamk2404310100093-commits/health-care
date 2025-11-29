@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Health Care Website</title>
+
+<!-- ================== CSS ================== -->
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+  background: #0b7dda;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* BANNER */
+.banner {
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* FOOTER */
+footer {
+  background: #0b7dda;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* SHOW/HIDE SECTIONS */
+.section {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+</style>
+
+</head>
+<body onload="showSection('home')">
+
+<!-- ================== HEADER ================== -->
+<header>
+  <h1>Health Care</h1>
+
+  <nav>
+    <ul>
+      <li><a onclick="showSection('home')">Home</a></li>
+      <li><a onclick="showSection('about')">About</a></li>
+      <li><a onclick="showSection('services')">Services</a></li>
+      <li><a onclick="showSection('contact')">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================== HOME SECTION ================== -->
+<section id="home" class="section active">
+  <div class="banner" style="background-image:url('https://images.unsplash.com/photo-1576765607924-b1b5c1f234f2');"></div>
+
+  <div class="container">
+    <h2>Welcome to Health Care</h2>
+    <p>
+      We provide high-quality medical services with expert doctors, modern facilities, 
+      and 24/7 healthcare support for all patients.
+    </p>
+  </div>
+</section>
+
+<!-- ================== ABOUT SECTION ================== -->
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>
+      Health Care is a trusted medical provider dedicated to patient health and well-being. 
+      Our team of doctors, nurses, and specialists ensure the best care experience.
+    </p>
+  </div>
+</section>
+
+<!-- ================== SERVICES SECTION ================== -->
+<section id="services" class="section">
+  <div class="container">
+    <h2>Our Services</h2>
+    <ul>
+      <li>General Health Checkups</li>
+      <li>Emergency Care</li>
+      <li>Laboratory & Diagnostics</li>
+      <li>Specialist Consultation</li>
+      <li>Vaccination Programs</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================== CONTACT SECTION ================== -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Email: healthsupport@gmail.com</p>
+    <p>Phone: +91 9876543210</p>
+    <p>Address: Wellness Hospital, India</p>
+  </div>
+</section>
+
+<!-- ================== FOOTER ================== -->
+<footer>
+  © 2025 Health Care | All Rights Reserved
+</footer>
+
+<!-- ================== JAVASCRIPT ================== -->
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
